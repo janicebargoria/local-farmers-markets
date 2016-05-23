@@ -56,7 +56,7 @@ function getLocation(event) {
 // request list of local farmers markets 
 function getLocalMarkets(latitude, longitude) {
 	var xhr = new XMLHttpRequest(),
-		xhrURL = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/locSearch?lat=" + latitude + "&lng=" + longitude;  
+		xhrURL = "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/locSearch?lat=" + latitude + "&lng=" + longitude;  
 
 	xhr.open('GET', xhrURL);
 	xhr.onreadystatechange = function() {
@@ -82,7 +82,7 @@ function getMarketDetails(marketSearch) {
 	// using the aquired marketid make a new api call to access market details
 	function submitID(marketID) {	
 		var xhr = new XMLHttpRequest(),
-			xhrURL = xhrURL = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + marketID;
+			xhrURL = xhrURL = "https://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + marketID;
 		xhr.open('GET', xhrURL);
 		xhr.onreadystatechange = function() {
 			if (xhr.readyState === 4) {
